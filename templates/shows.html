@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}
+	Podcasts list
+{% endblock %}
+
+{% block content %}
+	{% for show in shows %}
+		<div>
+			<p style="font-weight: bold"><br><u>{{ show.name }}</u><br></p>
+		    <p style="font-weight: bold"><br>{{ show.description }}<br></p>
+		    <a href="{{ show.imgUrl}}" ><img src="{{ show.image }}", width="200", height="200"></img></a>
+		    <!-- <a href="https://open.spotify.com/show/{{ show.showId }}"><br>Full episode list</a> -->
+		</div>
+	{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<form action="http://localhost:5000/token" method="get">
+		<label for="token">SpotifyToken:</label>
+		<input type="text" id="token" name="token"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+{% endblock %}
